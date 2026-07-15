@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Voice → Edits · Inkling</title>
+<style>
+:root{--bg:#0d1117;--panel:#161b22;--border:#30363d;--fg:#e6edf3;--dim:#8b949e;
+--accent:#e8945a;--green:#1f6f43;--greenbg:#12261b;--red:#8b3a3a;--redbg:#2a1517}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 -apple-system,'SF Pro Text',sans-serif;padding:24px 32px}
+h1{font-size:20px;font-weight:650;letter-spacing:-.2px}
+h1 .dim{color:var(--dim);font-weight:400}
+#bar{display:flex;gap:12px;align-items:center;margin:18px 0}
+select,button{background:var(--panel);color:var(--fg);border:1px solid var(--border);
+border-radius:8px;padding:8px 14px;font-size:14px;cursor:pointer}
+button:hover{border-color:var(--dim)}
+#rec.on{background:#7a2626;border-color:#c0392b;animation:pulse 1.2s infinite}
+@keyframes pulse{50%{opacity:.6}}
+#go{background:var(--accent);color:#111;font-weight:650;border:none;padding:8px 22px}
+#audio-note{color:var(--dim);font-size:13px}
+#main{display:grid;grid-template-columns:1.15fr 1fr;gap:20px}
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:18px 20px;overflow:auto}
+.panel h3{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--dim);margin-bottom:10px}
+#doc{white-space:pre-wrap;font:13.5px/1.55 ui-monospace,'SF Mono',monospace;max-height:72vh}
+#doc .add{background:var(--greenbg);color:#7ee2a8;display:block;border-left:3px solid var(--green);padding-left:6px}
+#doc .del{background:var(--redbg);color:#e07a7a;display:block;border-left:3px solid var(--red);padding-left:6px;text-decoration:line-through}
+.card{border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:14px;background:var(--panel)}
+.card.winner{border-color:var(--accent)}
+.card h4{font-size:14px;display:flex;justify-content:space-between}
+.card .stats{color:var(--dim);font-size:13px;margin:4px 0 8px}
+.card .stats b{color:var(--fg)}
+.card pre{font:12px/1.5 ui-monospace,monospace;white-space:pre-wrap;color:#c9d1d9;
+background:#0d1117;border-radius:8px;padding:10px;max-height:200px;overflow:auto}
+.card .err{color:#e07a7a}
+.spin{color:var(--accent)}
+.badge{font-size:11px;border:1px solid var(--border);border-radius:20px;padding:1px 9px;color:var(--dim)}
+#transcript{color:var(--dim);font-size:13px;font-style:italic;margin-top:6px;display:none}
+</style>
+</head>
+<body>
+<h1>Voice → Edits <span class="dim">· thinkingmachines/Inkling, fine-tuned with Tinker · Sundial</span></h1>
+<div id="bar">
+  <select id="sample"></select>
+  <button id="rec">🎙 Record</button>
+  <audio id="player" controls style="height:34px"></audio>
+  <button id="go">Race both models ▶</button>
+  <span id="audio-note"></span>
+</div>
+<div id="transcript"></div>
+<div id="main">
+  <div class="panel"><h3>Document</h3><div id="doc"></div></div>
+  <div>
+    <div class="card" id="card-tuned"><h4>Fine-tuned Inkling <span class="badge">45 LoRA steps</span></h4><div class="body"></div></div>
+    <div class="card" id="card-base"><h4>Base Inkling <span class="badge">zero-shot</span></h4><div class="body"></div></div>
+  </div>
+</div>
+<script>
+let SAMPLES=[], audioB64=null, doc="", target=null, results={};
+const norm=s=>s.split("\n").map(l=>l.replace(/[ \t]+$/,"")).join("\n").replace(/\n{3,}/g,"\n\n").trim();
+
+const $=s=>document.querySelector(s);
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+function b64(bytes){
+  let s="";
+  for(let i=0;i<bytes.length;i+=32768) s+=String.fromCharCode.apply(null,bytes.subarray(i,i+32768));
+  return btoa(s);
+}
+
+async function init(){
+  SAMPLES=await (await fetch("/api/samples")).json();
+  $("#sample").innerHTML='<option value="">— pick a sample voice memo —</option>'+
+    SAMPLES.map((s,i)=>`<option value="${i}">${s.ops.join(" + ")} (${s.voice.replace("openai:","")})</option>`).join("");
+  loadSample(0); $("#sample").value=0;
+}
+async function loadSample(i){
+  const s=SAMPLES[i]; doc=s.doc; target=s.target||null; results={};
+  renderDoc(null);
+  const buf=await (await fetch("/api/samples/"+s.wav)).arrayBuffer();
+  audioB64=b64(new Uint8Array(buf));
+  $("#player").src="/api/samples/"+s.wav;
+  $("#transcript").textContent='Instruction (revealed after run): "'+s.instruction+'"';
+  $("#transcript").style.display="none";
+  for(const m of ["base","tuned"]) $(`#card-${m} .body`).innerHTML="";
+}
+$("#sample").onchange=e=>e.target.value!==""&&loadSample(+e.target.value);
+
+function renderDoc(diff){
+  $("#doc").innerHTML = diff
+    ? diff.map(l=>l.t==="same"?esc(l.s)+"\n":`<span class="${l.t}">${esc(l.s)||" "}</span>`).join("")
+    : esc(doc);
+  const first=$("#doc .add,#doc .del");
+  if(first) first.scrollIntoView({behavior:"smooth",block:"center"});
+}
+
+// --- mic: PCM capture -> 16k mono wav ---
+let recording=false, ctx, proc, chunks=[], srcRate;
+$("#rec").onclick=async()=>{
+  if(!recording){
+    const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+    ctx=new AudioContext(); srcRate=ctx.sampleRate; chunks=[];
+    const src=ctx.createMediaStreamSource(stream);
+    proc=ctx.createScriptProcessor(4096,1,1);
+    proc.onaudioprocess=e=>chunks.push(new Float32Array(e.inputBuffer.getChannelData(0)));
+    src.connect(proc); proc.connect(ctx.destination);
+    recording=true; $("#rec").textContent="⏹ Stop"; $("#rec").classList.add("on");
+  }else{
+    proc.disconnect(); ctx.close(); recording=false;
+    $("#rec").textContent="🎙 Record"; $("#rec").classList.remove("on");
+    const flat=new Float32Array(chunks.reduce((n,c)=>n+c.length,0));
+    let o=0; for(const c of chunks){flat.set(c,o);o+=c.length}
+    const ratio=srcRate/16000, n=Math.floor(flat.length/ratio), pcm=new Int16Array(n);
+    for(let i=0;i<n;i++){const v=flat[Math.floor(i*ratio)];pcm[i]=Math.max(-1,Math.min(1,v))*32767}
+    const wav=new DataView(new ArrayBuffer(44+pcm.length*2));
+    const w=(off,s)=>[...s].forEach((c,i)=>wav.setUint8(off+i,c.charCodeAt(0)));
+    w(0,"RIFF");wav.setUint32(4,36+pcm.length*2,true);w(8,"WAVEfmt ");
+    wav.setUint32(16,16,true);wav.setUint16(20,1,true);wav.setUint16(22,1,true);
+    wav.setUint32(24,16000,true);wav.setUint32(28,32000,true);wav.setUint16(32,2,true);
+    wav.setUint16(34,16,true);w(36,"data");wav.setUint32(40,pcm.length*2,true);
+    new Int16Array(wav.buffer,44).set(pcm);
+    const bytes=new Uint8Array(wav.buffer);
+    audioB64=b64(bytes);
+    $("#player").src=URL.createObjectURL(new Blob([bytes],{type:"audio/wav"}));
+    $("#sample").value=""; $("#transcript").style.display="none";
+    $("#audio-note").textContent="recorded "+(n/16000).toFixed(1)+"s";
+  }
+};
+
+// --- race ---
+async function run(model){
+  const card=$(`#card-${model}`), body=card.querySelector(".body");
+  card.classList.remove("winner");
+  const t0=performance.now();
+  body.innerHTML='<div class="stats spin">thinking… <span class="t">0.0</span>s</div>';
+  const timer=setInterval(()=>{body.querySelector(".t").textContent=((performance.now()-t0)/1000).toFixed(1)},100);
+  try{
+    const r=await (await fetch("/api/edit",{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({doc,model,audio_b64:audioB64})})).json();
+    clearInterval(timer); results[model]=r;
+    let verdict = r.error ? `<span class="err">✗ ${esc(r.error)}</span>` : "✓ edits apply";
+    if(!r.error && target){
+      r.correct = norm(r.applied_doc)===norm(target);
+      verdict = r.correct ? '<span style="color:#7ee2a8">✓ correct edit</span>'
+                          : '<span class="err">✗ applies, but wrong result</span>';
+    }
+    body.innerHTML=`<div class="stats"><b>${(r.ms/1000).toFixed(1)}s</b> · <b>${r.tokens}</b> completion tokens · ${verdict}</div>
+      <pre>${esc(r.response||"(no edit blocks)")}</pre>`;
+    if(!r.error){card.onclick=()=>renderDoc(r.diff); }
+    if(model==="tuned"&&!r.error) renderDoc(r.diff);
+  }catch(e){clearInterval(timer);body.innerHTML=`<div class="err">${esc(String(e))}</div>`}
+}
+$("#go").onclick=async()=>{
+  if(!audioB64) return alert("record or pick a sample first");
+  renderDoc(null);
+  await Promise.all([run("tuned"),run("base")]);
+  const t=results.tuned,b=results.base;
+  const better = target ? (t?.correct&&!b?.correct) : (t&&b&&!t.error&&(b.error||t.ms<b.ms));
+  if(better) $("#card-tuned").classList.add("winner");
+  const i=$("#sample").value; if(i!=="") $("#transcript").style.display="block";
+};
+init();
+</script>
+</body>
+</html>

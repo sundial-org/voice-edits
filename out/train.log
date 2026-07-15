@@ -1,0 +1,53 @@
+train=960 val=120
+rendering datums (audio encoded client-side)...
+epoch 0 step 0/45 lr=1.00e-04 nll=0.5027
+epoch 0 step 1/45 lr=9.78e-05 nll=0.4868
+epoch 0 step 2/45 lr=9.56e-05 nll=0.4446
+epoch 0 step 3/45 lr=9.33e-05 nll=0.4304
+epoch 0 step 4/45 lr=9.11e-05 nll=0.3409
+epoch 0 step 5/45 lr=8.89e-05 nll=0.2266
+epoch 0 step 6/45 lr=8.67e-05 nll=0.1655
+epoch 0 step 7/45 lr=8.44e-05 nll=0.1159
+epoch 0 step 8/45 lr=8.22e-05 nll=0.1082
+epoch 0 step 9/45 lr=8.00e-05 nll=0.0950
+epoch 0 step 10/45 lr=7.78e-05 nll=0.0772
+epoch 0 step 11/45 lr=7.56e-05 nll=0.0797
+epoch 0 step 12/45 lr=7.33e-05 nll=0.0776
+epoch 0 step 13/45 lr=7.11e-05 nll=0.0706
+epoch 0 step 14/45 lr=6.89e-05 nll=0.0591
+epoch 0 VAL nll=0.0751
+sampler checkpoint: tinker://66c938b2-ad0f-5284-aec4-c6ad53a0f3ca:train:0/sampler_weights/epoch0
+epoch 1 step 15/45 lr=6.67e-05 nll=0.0751
+epoch 1 step 16/45 lr=6.44e-05 nll=0.0684
+epoch 1 step 17/45 lr=6.22e-05 nll=0.0551
+epoch 1 step 18/45 lr=6.00e-05 nll=0.0511
+epoch 1 step 19/45 lr=5.78e-05 nll=0.0492
+epoch 1 step 20/45 lr=5.56e-05 nll=0.0476
+epoch 1 step 21/45 lr=5.33e-05 nll=0.0440
+epoch 1 step 22/45 lr=5.11e-05 nll=0.0502
+epoch 1 step 23/45 lr=4.89e-05 nll=0.0554
+epoch 1 step 24/45 lr=4.67e-05 nll=0.0413
+epoch 1 step 25/45 lr=4.44e-05 nll=0.0493
+epoch 1 step 26/45 lr=4.22e-05 nll=0.0424
+epoch 1 step 27/45 lr=4.00e-05 nll=0.0360
+epoch 1 step 28/45 lr=3.78e-05 nll=0.0339
+epoch 1 step 29/45 lr=3.56e-05 nll=0.0361
+epoch 1 VAL nll=0.0467
+sampler checkpoint: tinker://66c938b2-ad0f-5284-aec4-c6ad53a0f3ca:train:0/sampler_weights/epoch1
+epoch 2 step 30/45 lr=3.33e-05 nll=0.0341
+epoch 2 step 31/45 lr=3.11e-05 nll=0.0395
+epoch 2 step 32/45 lr=2.89e-05 nll=0.0305
+epoch 2 step 33/45 lr=2.67e-05 nll=0.0292
+epoch 2 step 34/45 lr=2.44e-05 nll=0.0298
+epoch 2 step 35/45 lr=2.22e-05 nll=0.0323
+epoch 2 step 36/45 lr=2.00e-05 nll=0.0297
+epoch 2 step 37/45 lr=1.78e-05 nll=0.0348
+epoch 2 step 38/45 lr=1.56e-05 nll=0.0307
+epoch 2 step 39/45 lr=1.33e-05 nll=0.0273
+epoch 2 step 40/45 lr=1.11e-05 nll=0.0262
+epoch 2 step 41/45 lr=1.00e-05 nll=0.0243
+epoch 2 step 42/45 lr=1.00e-05 nll=0.0240
+epoch 2 step 43/45 lr=1.00e-05 nll=0.0350
+epoch 2 step 44/45 lr=1.00e-05 nll=0.0227
+epoch 2 VAL nll=0.0398
+sampler checkpoint: tinker://66c938b2-ad0f-5284-aec4-c6ad53a0f3ca:train:0/sampler_weights/epoch2

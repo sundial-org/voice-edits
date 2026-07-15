@@ -1,0 +1,1600 @@
+{
+ "n": 120,
+ "model_path": null,
+ "mode": "voice",
+ "agg": {
+  "parsed": 113,
+  "applied": 113,
+  "exact": 79,
+  "failed": 0
+ },
+ "rows": [
+  {
+   "id": "doc_0236_e0",
+   "ops": [
+    "fix_typo",
+    "delete_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 139,
+   "response": "<edit>\n<<<<<<< SEARCH\nwich runs at a locked 60 frames per second on target hardware.\n=======\nwhich runs at a locked 60 frames per second on target hardware.\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n- Emotional authenticity through unscripted dialogue trees with 14 recurring NPCs\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0236_e1",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 101,
+   "response": "<edit>\n<<<<<<< SEARCH\nA closed beta for 500 backers follows on September 3.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0236_e2",
+   "ops": [
+    "insert_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 145,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Player agency without fail states\u2014failure reshapes the world rather than ending the session\n=======\n- Player agency without fail states\u2014failure reshapes the world rather than ending the session\n- Collect feedback from the pilot group\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0236_e3",
+   "ops": [
+    "rename_heading",
+    "rename_entity"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 189,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Development Status\n=======\n## Next Steps\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\nCore Pillars\n=======\nDana Pillars\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0222_e0",
+   "ops": [
+    "insert_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 140,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Label each string with weatherproof tags before leaving the roof\n=======\n- Label each string with weatherproof tags before leaving the roof\n- Collect feedback from the pilot group\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0222_e1",
+   "ops": [
+    "rename_entity",
+    "change_number"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 102,
+   "response": "<edit>\n<<<<<<< SEARCH\nper NEC Article 690.31\n=======\nper NEC pria 690.36\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0222_e2",
+   "ops": [
+    "delete_section",
+    "fix_typo"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 284,
+   "response": "<edit>\n<<<<<<< SEARCH\n## DC Wiring and Combiner Boxes\nRun 10 AWG PV wire in continuous conduit from the array to Combiner Box A, located on the north parapet wall. Keep DC and AC raceways separated by at least 1 inch, per NEC Article 690.31. Each combiner accepts four strings fused at 15 A; do not mix 430 W and older 370 W modules on the same fuse.\n\nGrounding electrode conductors must be bare copper, sized per Table 250.66, and bonded to the rail system with listed lay-in lugs. Double-check that rapid shutdown devices are within 1 foot of the array boundary, as required by the 2023 NEC update adopted in this jurisdiction on January 1, 2024.\n=======\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\nwich applies\n=======\nwhich applies\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0222_e3",
+   "ops": [
+    "rename_entity"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 1200,
+   "response": "",
+   "parsed": false,
+   "applied": false,
+   "exact": false,
+   "error": "no edit blocks parsed"
+  },
+  {
+   "id": "doc_0025_e0",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 133,
+   "response": "<edit>\n<<<<<<< SEARCH\nWe still need to resolve clock drift between the Tokyo and Lisbon nodes and finalize licensing terms for Lin Zhou\u2019s bridge firmware.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0025_e1",
+   "ops": [
+    "change_number"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 132,
+   "response": "<edit>\n<<<<<<< SEARCH\nredundant 10 Gbps fiber links\n=======\nredundant 12 Gbps fiber links\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0025_e2",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 220,
+   "response": "<edit>\n<<<<<<< SEARCH\n## System Architecture\nThe backbone runs on redundant 10 Gbps fiber links between nodes. Each site hosts identical reference monitors\u2014Genelec 8351B\u2014calibrated to 83 dB SPL at the mix position. We use a custom Dante/AES67 bridge developed by engineer Lin Zhou, deployed first on March 14, 2024.\n\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0025_e3",
+   "ops": [
+    "delete_section",
+    "rename_entity"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 299,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Open Questions\nWe still need to resolve clock drift between the Tokyo and Lisbon nodes and finalize licensing terms for Lin Zhou\u2019s bridge firmware. Budget approval for the redundant fiber upgrade is pending at \u20ac42,000.\n=======\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n## System Architecture\n=======\n## System Omar\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\ntechnical architecture\n=======\ntechnical Omar\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0079_e0",
+   "ops": [
+    "insert_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 113,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Two-factor authentication enforcement for organization admins\n=======\n- Two-factor authentication enforcement for organization admins\n- Collected feedback from the pilot group\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0079_e1",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 102,
+   "response": "<edit>\n<<<<<<< SEARCH\nWe closed Sprint 42 with 87% of committed stories delivered, up from 71% in Sprint 41.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0079_e2",
+   "ops": [
+    "move_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 168,
+   "response": "",
+   "parsed": false,
+   "applied": false,
+   "exact": false,
+   "error": "no edit blocks parsed"
+  },
+  {
+   "id": "doc_0079_e3",
+   "ops": [
+    "change_number"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 78,
+   "response": "<edit>\n<<<<<<< SEARCH\nWe closed Sprint 42 with 87% of committed stories delivered\n=======\nWe closed Sprint 42 with 89% of committed stories delivered\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0111_e0",
+   "ops": [
+    "move_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 247,
+   "response": "",
+   "parsed": false,
+   "applied": false,
+   "exact": false,
+   "error": "no edit blocks parsed"
+  },
+  {
+   "id": "doc_0111_e1",
+   "ops": [
+    "rename_heading"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 65,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Risk Factors and Mitigation\n=======\n## Action Items\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0111_e2",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 122,
+   "response": "<edit>\n<<<<<<< SEARCH\nThe findings indicate that while long-haul efficiency improved by 8.2 percent, regional hub congestion remains the dominant bottleneck.\n=======\nRegional hub congestion remains the dominant bottleneck.\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0111_e3",
+   "ops": [
+    "insert_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 144,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Night-shift dispatch accuracy improved to 96.7 percent following the new scanning protocol\n=======\n- Night-shift dispatch accuracy improved to 96.7 percent following the new scanning protocol\n- Schedule a follow-up review. Appreciate it.\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0273_e0",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 104,
+   "response": "<edit>\n<<<<<<< SEARCH\nThe release introduces the Cortex AI detection engine, which processes over 12 billion events per day with sub-200ms latency.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0273_e1",
+   "ops": [
+    "rename_heading"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 65,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Critical Vulnerability Patches\n=======\n## Key Risks\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0273_e2",
+   "ops": [
+    "rename_entity"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 112,
+   "response": "<edit>\n<<<<<<< SEARCH\nhardened endpoint telemetry\n=======\nMarcus endpoint telemetry\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\nEndpoint and Network Hardening\n=======\nEndpoint and Network Marcus\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0273_e3",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 410,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Major Platform Releases\nOn August 22, 2024, we shipped SentinelGrid Core 4.7.0 across all global nodes. The release introduces the Cortex AI detection engine, which processes over 12 billion events per day with sub-200ms latency. Key milestones include:\n- Full integration of the ZeroTrust Access Gateway (ZTAG-9000) for hybrid cloud workloads\n- Native support for MITRE ATT&CK v14.1 mapping in incident timelines\n- Enhanced SOAR playbooks for automated containment of supply-chain intrusions\n\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0102_e0",
+   "ops": [
+    "delete_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 113,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Refrigerated contract minimums increased from 12 to 18 loads per month\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0102_e1",
+   "ops": [
+    "move_bullet",
+    "delete_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 473,
+   "response": "<edit>\n<<<<<<< SEARCH\nAdditional milestones:\n- Launch of the Meridian Green Fleet pilot, deploying 48 electric terminal tractors at the Chicago hub\n- Partnership with the Environmental Protection Agency\u2019s SmartWay Transport program, effective June 2024\n- Publication of the 2023 Carbon Disclosure Report, available to stakeholders by request\n\nCompliance updates also include revised hazardous materials handling protocols aligned with the Department of Transportation\u2019s 2024 emergency response amendments.\n=======\nAdditional milestones:\n- Compliance updates also include revised hazardous materials handling protocols aligned with the Department of Transportation\u2019s 2024 emergency response amendments.\n- Launch of the Meridian Green Fleet pilot, deploying 48 electric terminal tractors at the Chicago hub\n- Partnership with the Environmental Protection Agency\u2019s SmartWay Transport program, effective June 2024\n- Publication of the 2023 Carbon Disclosure Report, available to stakeholders by request\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n- Standard ground: delivery within 3-5 business days\n- Priority ground: delivery within 2 business days\n>>>>>>> REPLACE\n- Priority ground: delivery within 2 business days\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0102_e2",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 228,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Client Portal & Service Updates\n\nThe Meridian Client Gateway received a major update on May 15, 2024. Users now have access to predictive ETAs powered by machine-learning forecasts trained on 2.3 million historical delivery records.\n\nService-level commitments have been revised as follows:\n- Standard ground: delivery within 3-5 business days\n- Priority ground: delivery within 2 business days\n- White-glove installation: 48-hour scheduling with dedicated crew assignment\n\nFor technical support or contract inquiries, contact the Logistics Support Center at 1-800-555-0199 or via the updated portal messaging system.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0102_e3",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 219,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Client Portal & Service Updates\n\nThe Meridian Client Gateway received a major update on May 15, 2024. Users now have access to predictive ETAs powered by machine-learning forecasts trained on 2.3 million historical delivery records.\n\nService-level commitments have been revised as follows:\n- Standard ground: delivery within 3-5 business days\n- Priority ground: delivery within 2 business days\n- White-glove installation: 48-hour scheduling with dedicated crew assignment\n\nFor technical support or contract inquiries, contact the Logistics Support Center at 1-800-555-0199 or via the updated portal messaging system.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0096_e0",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 87,
+   "response": "<edit>\n<<<<<<< SEARCH\nPhase one involves API credential provisioning and sandbox testing, typically completed within five business days.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0096_e1",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 92,
+   "response": "<edit>\n<<<<<<< SEARCH\nPhase two introduces live micro-transactions capped at $50,000 to validate latency benchmarks.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0096_e2",
+   "ops": [
+    "move_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 233,
+   "response": "",
+   "parsed": false,
+   "applied": false,
+   "exact": false,
+   "error": "no edit blocks parsed"
+  },
+  {
+   "id": "doc_0096_e3",
+   "ops": [
+    "delete_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 141,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Real-time fraud scoring using a machine-learning model updated every 90 minutes\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0247_e0",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 86,
+   "response": "<edit>\n<<<<<<< SEARCH\nConstruction begins October 2025, with revenue service targeted for September 2026.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0247_e1",
+   "ops": [
+    "insert_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 219,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Retraining of 34 existing operators and maintenance staff through a 240-hour certification program developed with Riverside Community College\n=======\n- Retraining of 34 existing operators and maintenance staff through a 240-hour certification program developed with Riverside Community College\n- Schedule a follow-up review\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0247_e2",
+   "ops": [
+    "insert_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 323,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Retraining of 34 existing operators and maintenance staff through a 240-hour certification program developed with Riverside Community College\n=======\n- Retraining of 34 existing operators and maintenance staff through a 240-hour certification program developed with Riverside Community College\n- Confirmation of the $7.8 million budget allocation, federal match structure, and local bond disbursement schedule with RTA Finance and the Federal Transit Administration prior to procurement\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0247_e3",
+   "ops": [
+    "delete_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 75,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Procurement of 12 40-foot battery-electric buses from Proterra, with delivery scheduled for June 2026\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0200_e0",
+   "ops": [
+    "rename_entity"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 161,
+   "response": "",
+   "parsed": false,
+   "applied": false,
+   "exact": false,
+   "error": "no edit blocks parsed"
+  },
+  {
+   "id": "doc_0200_e1",
+   "ops": [
+    "delete_section",
+    "rename_heading"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 288,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Partnerships and Sponsorship\nThis year\u2019s presenting sponsor is the Meridian Technology Foundation, contributing $75,000 toward venue costs and scholarship travel for 40 rural teachers. Secondary support comes from BrightPath Devices, which will donate 120 refurbished tablets for our pilot classrooms. We are also partnering with Denver Public Media to broadcast the opening address to an estimated audience of 8,000 remote viewers.\n=======\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n## Event Overview and Mission\n=======\n## Details\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0200_e2",
+   "ops": [
+    "delete_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 116,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Networking reception with 25 partner organizations from 3:45 p.m. to 4:00 p.m.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0200_e3",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 341,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Venue, Date, and Logistics\nThe one-day summit runs from 8:30 a.m. to 4:00 p.m. on Friday, March 14, 2025. The Civic Arts Center offers 12 breakout rooms, an auditorium seating 500, and complimentary parking for 180 vehicles. Registration opens January 20, 2025, through the Foundation portal, with early-bird pricing available until February 10. Catering will accommodate 340 plated lunches prepared by local vendor Green Plate Co-op, and all sessions will be live-captioned and archived for remote access.\n\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0265_e0",
+   "ops": [
+    "delete_bullet",
+    "rename_heading"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 106,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Project Overview\n=======\n## Priorities\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n- Digital archives of every session, licensed under Creative Commons\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0265_e1",
+   "ops": [
+    "rename_entity",
+    "delete_sentence"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 973,
+   "response": "<edit>\n<<<<<<< SEARCH\nconverted warehouse at 884 Cedar Street\n=======\nconverted Marcus at 884 Cedar Street\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\nCedar Street Warehouse on October 18, 2025\n=======\nCedar Street Marcus on October 18, 2025\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n, 90% of whom will continue producing independently.\n=======\n.\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0265_e2",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 144,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Impact and Sustainability\nBy 2026 we project 120 graduates, 90% of whom will continue producing independently. Partnerships with the Eastside Public Library and Metro Youth Arts ensure long-term venue access and promotional support. Resonance Collective will match 20% of the grant through in-kind studio hours and volunteer engineering.\n\nWe ask the Arts Futures Foundation to invest in equitable sound education. Together we can turn idle creativity into published art.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0265_e3",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 408,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Program Design\nCommunity Sound Labs will run three 10-week cohorts in 2025, serving 36 emerging producers aged 16\u201325. Each participant receives 20 hours of guided studio time, mentorship from industry engineers, and a completed EP released on our label. The curriculum emphasizes analog synthesis, field recording, and collaborative mixing.\n\nKey deliverables include:\n- Installation of 6 workstation pods with MIDI controllers and reference monitors\n- A mobile recording kit for neighborhood outreach\n- A final showcase concert at the Cedar Street Warehouse on October 18, 2025\n- Digital archives of every session, licensed under Creative Commons\n\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0278_e0",
+   "ops": [
+    "delete_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 155,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Added strain gauge at base for real-time load monitoring\n- Tested lift capacity at 8.4 kg sustained\n>>>>>>> REPLACE\n- Added strain gauge at base for real-time load monitoring\n</edit>",
+   "parsed": false,
+   "applied": false,
+   "exact": false,
+   "error": "no edit blocks parsed"
+  },
+  {
+   "id": "doc_0278_e1",
+   "ops": [
+    "change_number"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 116,
+   "response": "<edit>\n<<<<<<< SEARCH\n0.45 m radius\n=======\n0.55 m radius\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0278_e2",
+   "ops": [
+    "rename_entity"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 321,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Upcoming Focus\n=======\n## Upcoming elena\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0278_e3",
+   "ops": [
+    "move_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 316,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Re-machined palm plate to 3.2 mm tolerance\n- Replaced servo model HS-7950TH with Savox SV-0235MG\n- Added strain gauge at base for real-time load monitoring\n- Tested lift capacity at 8.4 kg sustained\n=======\n- Tested lift capacity at 8.4 kg sustained\n- Re-machined palm plate to 3.2 mm tolerance\n- Replaced servo model HS-7950TH with Savox SV-0235MG\n- Added strain gauge at base for real-time load monitoring\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0282_e0",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 126,
+   "response": "<edit>\n<<<<<<< SEARCH\nAll feedback surveys must be submitted by March 22, 2026 to qualify for the continuing-education credit.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0282_e1",
+   "ops": [
+    "fix_typo"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 85,
+   "response": "<edit>\n<<<<<<< SEARCH\nschedual\n=======\nschedule\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0282_e2",
+   "ops": [
+    "rename_entity"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 190,
+   "response": "<edit>\n<<<<<<< SEARCH\nSouth Garage\n=======\nSouth Dana\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0282_e3",
+   "ops": [
+    "change_number"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 112,
+   "response": "<edit>\n<<<<<<< SEARCH\nThe total event budget is $38,000\n=======\nThe total event budget is $48,000\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0173_e0",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 178,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Revised Carrier Partnerships\nWe finalized amended service-level agreements with Pacific Transload and Atlantic Cargo Partners effective October 1, 2024. Contract adjustments include guaranteed 48-hour delivery windows for priority tier shipments and shared liability caps raised to $2.5 million per consignment. These partnerships extend coverage to 34 additional secondary markets in the southeastern region, reducing reliance on single-source routing through the Atlanta gateway.\n\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0173_e1",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 116,
+   "response": "<edit>\n<<<<<<< SEARCH\nDriver dispatch latency dropped from 4.2 minutes to 1.8 minutes during peak morning windows.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0173_e2",
+   "ops": [
+    "move_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 265,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Sorting throughput increased to 1,240 units per hour\n- Error rate in SKU verification fell below 0.4 percent\n- Energy consumption per pallet decreased by 18 percent compared to Q2 baseline\n=======\n- Energy consumption per pallet decreased by 18 percent compared to Q2 baseline\n- Sorting throughput increased to 1,240 units per hour\n- Error rate in SKU verification fell below 0.4 percent\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0173_e3",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 117,
+   "response": "<edit>\n<<<<<<< SEARCH\nThree new autonomous guided vehicles now operate in Zone C, handling pallet movement between receiving docks and high-bay storage.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0159_e0",
+   "ops": [
+    "insert_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 223,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Ground the array frame with continuous 6 AWG bare copper bonded to two ground rods\n=======\n- Ground the array frame with continuous 6 AWG bare copper bonded to two ground rods\n- Document the rollback procedure\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0159_e1",
+   "ops": [
+    "change_number"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 120,
+   "response": "<edit>\n<<<<<<< SEARCH\nNEC 2023 Article 690\n=======\nNEC 2023 Article 695\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0159_e2",
+   "ops": [
+    "move_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 293,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Confirm inverter firmware is updated to version 7.4.2 before commissioning\n- Label all DC homeruns with UV-resistant tags showing circuit 1 through 8\n- Torque lug connections to 35 in-lb using a calibrated torque wrench\n- Ground the array frame with continuous 6 AWG bare copper bonded to two ground rods\n=======\n- Ground the array frame with continuous 6 AWG bare copper bonded to two ground rods\n- Confirm inverter firmware is updated to version 7.4.2 before commissioning\n- Label all DC homeruns with UV-resistant tags showing circuit 1 through 8\n- Torque lug connections to 35 in-lb using a calibrated torque wrench\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0159_e3",
+   "ops": [
+    "rename_heading"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 59,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Safety and Compliance\n=======\n## Background\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0264_e0",
+   "ops": [
+    "change_number"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 364,
+   "response": "<edit>\n<<<<<<< SEARCH\n7 years\n=======\n17 years\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0264_e1",
+   "ops": [
+    "delete_bullet",
+    "rename_entity"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 139,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Audit Logger: retains immutable route logs for 7 years to meet DOT compliance\n=======\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\nNorth America\n=======\nNorth Dana\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0264_e2",
+   "ops": [
+    "insert_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 228,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Audit Logger: retains immutable route logs for 7 years to meet DOT compliance\n=======\n- Audit Logger: retains immutable route logs for 7 years to meet DOT compliance\n- Budget Confirmation: confirm the budget with finance\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0264_e3",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 83,
+   "response": "<edit>\n<<<<<<< SEARCH\nCybersecurity reviews by the internal Red Team are scheduled for February 10, 2025.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0227_e0",
+   "ops": [
+    "change_number"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 100,
+   "response": "<edit>\n<<<<<<< SEARCH\nThe null at 128 Hz was worse than last quarter\n=======\nThe null at 138 Hz was worse than last quarter\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0227_e1",
+   "ops": [
+    "rename_heading"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 57,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Room Calibration\n=======\n## Highlights\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0227_e2",
+   "ops": [
+    "move_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 208,
+   "response": "<edit>\n<<<<<<< SEARCH\n- All mute automation disabled?\n- Crossfades longer than 6 ms?\n- Print track named with version number?\n- Reference mix printed to same folder?\n- Backup copied to the NAS before leaving?\n=======\n- Backup copied to the NAS before leaving?\n- All mute automation disabled?\n- Crossfades longer than 6 ms?\n- Print track named with version number?\n- Reference mix printed to same folder?\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0227_e3",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 203,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Reference Mixes\nWe compared three releases this month: Lena Voss\u2019s *Midnight Static*, the collective\u2019s 2023 compilation *Concrete Gardens*, and the demo Marcus tracked on February 2. The Voss record sits wider but drier; ours had too much 400 Hz mud in the guitar bus. Use references not to copy, but to check translation. Listen on headphones, in the car, and on phone speakers. If the vocal disappears anywhere, fix it in the source, not with a plugin.\n\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0144_e0",
+   "ops": [
+    "move_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 203,
+   "response": "<edit>\n<<<<<<< SEARCH\nKey priorities include:\n- Retrofitting 120 existing trailers with IoT temperature sensors\n- Training 45 drivers on cold-chain compliance protocols\n- Deploying hydrogen pilot trucks on the Berlin\u2013Munich lane by Q1 2025\n- Updating warehouse management software to version 4.7 by October 30\n=======\nKey priorities include:\n- Updating warehouse management software to version 4.7 by October 30\n- Retrofitting 120 existing trailers with IoT temperature sensors\n- Training 45 drivers on cold-chain compliance protocols\n- Deploying hydrogen pilot trucks on the Berlin\u2013Munich lane by Q1 2025\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0144_e1",
+   "ops": [
+    "delete_section",
+    "insert_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 223,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Action Items and Next Steps\nEvery regional manager must submit route-optimization audits by September 15. The next lecture, scheduled for October 22, will review Q4 forecasts and pilot results from the hydrogen fleet. Staff should review the updated safety manual (revision 9.2) before attending.\n=======\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n- Updating warehouse management software to version 4.7 by October 30\n=======\n- Updating warehouse management software to version 4.7 by October 30\n- Schedule a follow-up review\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0144_e2",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 197,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Action Items and Next Steps\nEvery regional manager must submit route-optimization audits by September 15. The next lecture, scheduled for October 22, will review Q4 forecasts and pilot results from the hydrogen fleet. Staff should review the updated safety manual (revision 9.2) before attending.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0144_e3",
+   "ops": [
+    "delete_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 205,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Updating warehouse management software to version 4.7 by October 30\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0252_e0",
+   "ops": [
+    "rename_heading",
+    "rename_entity"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 145,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Upcoming Roadmap\n=======\n## Key Risks\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\nSeptember\n=======\nJordan\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0252_e1",
+   "ops": [
+    "change_number"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 109,
+   "response": "<edit>\n<<<<<<< SEARCH\nOur closed beta expanded from 120 to 310 participants on September 22.\n=======\nOur closed beta expanded from 130 to 310 participants on September 22.\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0252_e2",
+   "ops": [
+    "delete_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 124,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Reduced texture load times by 34% through asynchronous mipmapping\n- Fixed a race condition in the dialogue system that caused 12 reported soft-locks\n=======\n- Fixed a race condition in the dialogue system that caused 12 reported soft-locks\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0252_e3",
+   "ops": [
+    "rename_heading",
+    "delete_sentence"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 230,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Studio Overview\n=======\n## Action Items\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\nThank you for following the project.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0114_e0",
+   "ops": [
+    "move_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 274,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Phase 1 (Months 1-8): Install 120 kW solar arrays and charging infrastructure at the Meridian Indianapolis Hub on Kentucky Avenue\n- Phase 2 (Months 6-14): Integrate 45 electric cargo bikes and deploy the Meridian SmartRoute algorithm developed with Purdue University\n- Phase 3 (Months 15-24): Launch two solar micro-fulfillment centers in Broad Ripple and Fountain Square, reducing average delivery distance from 6.2 miles to 2.1 miles\n=======\n- Phase 3 (Months 15-24): Launch two solar micro-fulfillment centers in Broad Ripple and Fountain Square, reducing average delivery distance from 6.2 miles to 2.1 miles\n- Phase 1 (Months 1-8): Install 120 kW solar arrays and charging infrastructure at the Meridian Indianapolis Hub on Kentucky Avenue\n- Phase 2 (Months 6-14): Integrate 45 electric cargo bikes and deploy the Meridian SmartRoute algorithm developed with Purdue University\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0114_e1",
+   "ops": [
+    "delete_sentence",
+    "move_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 438,
+   "response": "<edit>\n<<<<<<< SEARCH\nCustomers such as Brightline Retail and Carter Health Systems now demand carbon-neutral delivery options by Q3 2025.\n=======\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n- Phase 1 (Months 1-8): Install 120 kW solar arrays and charging infrastructure at the Meridian Indianapolis Hub on Kentucky Avenue\n- Phase 2 (Months 6-14): Integrate 45 electric cargo bikes and deploy the Meridian SmartRoute algorithm developed with Purdue University\n- Phase 3 (Months 15-24): Launch two solar micro-fulfillment centers in Broad Ripple and Fountain Square, reducing average delivery distance from 6.2 miles to 2.1 miles\n=======\n- Phase 3 (Months 15-24): Launch two solar micro-fulfillment centers in Broad Ripple and Fountain Square, reducing average delivery distance from 6.2 miles to 2.1 miles\n- Phase 1 (Months 1-8): Install 120 kW solar arrays and charging infrastructure at the Meridian Indianapolis Hub on Kentucky Avenue\n- Phase 2 (Months 6-14): Integrate 45 electric cargo bikes and deploy the Meridian SmartRoute algorithm developed with Purdue University\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0114_e2",
+   "ops": [
+    "change_number"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 56,
+   "response": "<edit>\n<<<<<<< SEARCH\n60 percent\n=======\n61 percent\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0114_e3",
+   "ops": [
+    "delete_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 137,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Phase 2 (Months 6-14): Integrate 45 electric cargo bikes and deploy the Meridian SmartRoute algorithm developed with Purdue University\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0283_e0",
+   "ops": [
+    "delete_bullet",
+    "rename_entity"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 245,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Verified by the European Energy Observatory in March 2024\n=======\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\nCommunity contributions are welcome via GitHub; please review our contribution guide before submitting pull requests.\n=======\nCommunity contributions are welcome; please review our contribution guide before submitting pull requests.\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0283_e1",
+   "ops": [
+    "move_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 355,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Real-time forecasting with 94.3% accuracy across the Nordic bidding zones\n- Open API access under the Apache 2.0 license\n- Integration modules for Python, Julia, and Rust\n- Historical backtesting dataset spanning 2018 through Q1 2024\n- Verified by the European Energy Observatory in March 2024\n=======\n- Verified by the European Energy Observatory in March 2024\n- Real-time forecasting with 94.3% accuracy across the Nordic bidding zones\n- Open API access under the Apache 2.0 license\n- Integration modules for Python, Julia, and Rust\n- Historical backtesting dataset spanning 2018 through Q1 2024\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0283_e2",
+   "ops": [
+    "fix_typo"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 1200,
+   "response": "",
+   "parsed": false,
+   "applied": false,
+   "exact": false,
+   "error": "no edit blocks parsed"
+  },
+  {
+   "id": "doc_0283_e3",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 80,
+   "response": "<edit>\n<<<<<<< SEARCH\nOur research partner, Dr. Elena Vasquez at TU Delft, validated the forecasting model in a peer-reviewed study published in Energy Systems in January 2024.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0290_e0",
+   "ops": [
+    "change_number"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 94,
+   "response": "<edit>\n<<<<<<< SEARCH\n65% of operating costs\n=======\n75% of operating costs\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0290_e1",
+   "ops": [
+    "delete_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 66,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Multilingual merchant dashboards localized for Spanish, Arabic, and Mandarin speakers\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0290_e2",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 174,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Proposed Solution\nNexus delivers a modular, API-first platform with three core pillars:\n- Real-time inventory synchronization across physical and digital storefronts\n- Community-owned logistics routing to reduce last-mile delivery costs by 40%\n- Multilingual merchant dashboards localized for Spanish, Arabic, and Mandarin speakers\n\nThe architecture runs on federated cloud nodes hosted by participating universities, reducing vendor lock-in.\n\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0290_e3",
+   "ops": [
+    "move_bullet",
+    "delete_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 1036,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Real-time inventory synchronization across physical and digital storefronts\n- Community-owned logistics routing to reduce last-mile delivery costs by 40%\n- Multilingual merchant dashboards localized for Spanish, Arabic, and Mandarin speakers\n=======\n- Community-owned logistics routing to reduce last-mile delivery costs by 40%\n- Real-time inventory synchronization across physical and digital storefronts\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0266_e0",
+   "ops": [
+    "rename_heading",
+    "delete_sentence"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 138,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Functional Requirements\n=======\n## Open Questions\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\nTerraGrid is building the operating system for grid decarbonization.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0266_e1",
+   "ops": [
+    "rename_heading"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 59,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Functional Requirements\n=======\n## Open Questions\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0266_e2",
+   "ops": [
+    "fix_typo"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 64,
+   "response": "<edit>\n<<<<<<< SEARCH\nwich delivers\n=======\nwhich delivers\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0266_e3",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 283,
+   "response": "<edit>\n<<<<<<< SEARCH\nThis document defines the v2.0 release of our Real-Time Carbon Intensity API, which delivers marginal emissions factors to enterprise clients every 15 minutes.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0005_e0",
+   "ops": [
+    "rename_entity"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 68,
+   "response": "<edit>\n<<<<<<< SEARCH\ncall Marcus Chen on the duty radio\n=======\ncall Sam Chen on the duty radio\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0005_e1",
+   "ops": [
+    "insert_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 136,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Return eyepieces to the foam-lined case in ascending focal-length order\n=======\n- Return eyepieces to the foam-lined case in ascending focal-length order\n- Document the rollback procedure\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0005_e2",
+   "ops": [
+    "delete_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 150,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Never force the mount; if tracking stalls, call Marcus Chen on the duty radio\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0005_e3",
+   "ops": [
+    "move_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 351,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Always cover optics when not in use to prevent dew accumulation\n- Log every session in the red binder near the control panel\n- Never force the mount; if tracking stalls, call Marcus Chen on the duty radio\n- Return eyepieces to the foam-lined case in ascending focal-length order\n=======\n- Return eyepieces to the foam-lined case in ascending focal-length order\n- Always cover optics when not in use to prevent dew accumulation\n- Log every session in the red binder near the control panel\n- Never force the mount; if tracking stalls, call Marcus Chen on the duty radio\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0030_e0",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 118,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Contact and Data Access\nPrincipal investigator: Dr. Elena Vasquez (e.vasquez@meridian-bio.org). Raw sequencing files and flow cytometry FCS data are deposited in the internal MBI repository under accession HEL-2024-089. Collaboration inquiries should reference protocol MBI-2024-117.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0030_e1",
+   "ops": [
+    "insert_bullet",
+    "delete_section"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 460,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Clone expansion in DMEM supplemented with 10% FBS and 1 \u00b5g/mL puromycin selection\n=======\n- Clone expansion in DMEM supplemented with 10% FBS and 1 \u00b5g/mL puromycin selection\n- Confirm the budget with finance\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n## Results\nOut of 312 single-cell clones screened, 23 exhibited correct integration confirmed by junction PCR and Sanger sequencing. Clone 7F showed the brightest and most uniform tdTomato fluorescence with a Z-score of 4.8 relative to wild-type controls. Quantitative flow cytometry on 14 September 2024 revealed 94.2% reporter-positive cells after 5 \u00b5M doxorubicin induction for 24 hours.\n\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0030_e2",
+   "ops": [
+    "change_number"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 82,
+   "response": "<edit>\n<<<<<<< SEARCH\n48 hours post-transfection\n=======\n49 hours post-transfection\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0030_e3",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 177,
+   "response": "<edit>\n<<<<<<< SEARCH\nThe first successful knock-in was verified on 22 June 2023.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0217_e0",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 134,
+   "response": "<edit>\n<<<<<<< SEARCH\nBrightline Solar maintained zero lost-time incidents across 34 worker-days. All fall-protection gear met ANSI Z359.11 standards, and the array complies with 2023 NEC Article 690 guidelines.\n=======\nAll fall-protection gear met ANSI Z359.11 standards, and the array complies with 2023 NEC Article 690 guidelines.\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0217_e1",
+   "ops": [
+    "insert_bullet",
+    "delete_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 132,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Warranty coverage: 25 years on panels, 12 years on inverters\n=======\n- Warranty coverage: 25 years on panels, 12 years on inverters\n- Circulate this summary to stakeholders\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n- Five-year electrical torque-check of all DC connections\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0217_e2",
+   "ops": [
+    "insert_bullet",
+    "rename_entity"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 123,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Five-year electrical torque-check of all DC connections\n=======\n- Five-year electrical torque-check of all DC connections\n- Document the rollback procedure\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\nElena Vasquez\n=======\nElena Jordan\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0217_e3",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 151,
+   "response": "<edit>\n<<<<<<< SEARCH\nThis README covers the 14.2 kW DC grid-tied photovoltaic array commissioned for the Whitman family residence at 482 Emerald Hill Road.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0259_e0",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 262,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Risk Monitoring and Next Steps\nMarcus Chen will present updated contingency maps at the November board meeting. Until then, regional managers must submit weekly bottleneck reports every Friday by 16:00 MST. Any deviation exceeding 6% from forecasted transit times should trigger an immediate escalation to the central operations desk. The goal remains clear: maintain 96% on-time delivery through the end of the fiscal year while reducing per-unit logistics costs by 9%.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0259_e1",
+   "ops": [
+    "delete_bullet",
+    "rename_entity"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 180,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Deploying predictive load-planning software across all 14 regional hubs.\n=======\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\nMarch\n=======\nDana\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0259_e2",
+   "ops": [
+    "move_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 332,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Rerouting 18% of Midwest volume through the Kansas City rail intermodal terminal.\n- Adding a second shift at the Omaha consolidation center effective October 28.\n- Renegotiating the carrier contract with Meridian Freight Logistics to cap rate increases at 4.5% through March 2025.\n- Deploying predictive load-planning software across all 14 regional hubs.\n=======\n- Deploying predictive load-planning software across all 14 regional hubs.\n- Rerouting 18% of Midwest volume through the Kansas City rail intermodal terminal.\n- Adding a second shift at the Omaha consolidation center effective October 28.\n- Renegotiating the carrier contract with Meridian Freight Logistics to cap rate increases at 4.5% through March 2025.\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0259_e3",
+   "ops": [
+    "change_number"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 107,
+   "response": "<edit>\n<<<<<<< SEARCH\nMarch 2025\n=======\nMarch 2026\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0167_e0",
+   "ops": [
+    "change_number"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 117,
+   "response": "<edit>\n<<<<<<< SEARCH\nRoom modes below 120 Hz require trap placement every 1.2 meters in rectangular spaces.\n=======\nRoom modes below 121 Hz require trap placement every 1.2 meters in rectangular spaces.\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0167_e1",
+   "ops": [
+    "delete_bullet",
+    "change_number"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 138,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Collective decision-making slows mixing by roughly 18% but improves long-term replay value.\n=======\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\nRoom modes below 120 Hz require trap placement every 1.2 meters in rectangular spaces.\n=======\nRoom modes below 130 Hz require trap placement every 1.2 meters in rectangular spaces.\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0167_e2",
+   "ops": [
+    "delete_section",
+    "rename_entity"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 1155,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Next Steps\nBy November 3, we will consolidate the 127 session files into a shared archive. Amara Osei will present preliminary findings to the advisory board on November 18. We also need to resolve licensing for the three archival field recordings captured in Lagos.\n=======\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\nScope & Timeline\n=======\nScope & Marcus\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0167_e3",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 203,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Listening Protocols\nWe adopted a blinded A/B structure for all reference tracks. Each reviewer logs frequency-response notes using standardized tags. The protocol mandates a 48-hour cooling period before final ratings, reducing confirmation bias observed in earlier trials conducted in March.\n\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0019_e0",
+   "ops": [
+    "change_number",
+    "fix_typo"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 144,
+   "response": "<edit>\n<<<<<<< SEARCH\nYou will recieve an encrypted laptop\n=======\nYou will receive an encrypted laptop\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\nextension 4400\n=======\nextension 4405\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0019_e1",
+   "ops": [
+    "fix_typo"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 69,
+   "response": "<edit>\n<<<<<<< SEARCH\nYou will recieve an encrypted laptop\n=======\nYou will receive an encrypted laptop\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0019_e2",
+   "ops": [
+    "rename_heading",
+    "change_number"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 90,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Core Systems and Access\n=======\n## Roadmap\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n72\n=======\n74\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0019_e3",
+   "ops": [
+    "fix_typo",
+    "delete_section"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 195,
+   "response": "<edit>\n<<<<<<< SEARCH\nschedual\n=======\nschedule\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n## First-Week Checklist\n\nTo stay on track during onboarding, complete the following tasks:\n\n- Attend the orientation session in Building C, Room 302\n- Submit your background verification to HR by day three\n- Configure your VPN profile and test remote access\n- Shadow the overnight network operations team\n- Review the 2024 disaster recovery playbook with your mentor\n- Confirm your badge activates the server room elevator bank\n\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0292_e0",
+   "ops": [
+    "insert_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 83,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Gift buyers seeking curated seasonal boxes delivered monthly\n=======\n- Gift buyers seeking curated seasonal boxes delivered monthly\n- Document the rollback procedure\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0292_e1",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 227,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Timeline and Milestones\n- February 1, 2025: Design approval and API contract finalized\n- February 28, 2025: Beta release for 50 internal testers and two partner cafes\n- March 15, 2025: Public launch with marketing campaign led by Creative Director Mara Olsen\n\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0292_e2",
+   "ops": [
+    "rename_entity",
+    "move_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 252,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Real-time inventory visibility for the Ethiopia Yirgacheffe and Colombia Huila lots\n=======\n- Real-time inventory visibility for the Sam Yirgacheffe and Colombia Huila lots\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n- One-click reorder for past wholesale invoices\n- Real-time inventory visibility for the Sam Yirgacheffe and Colombia Huila lots\n- Subscription pause, skip, and swap functionality with a 48-hour cutoff before roast day\n- Integration with ShipStation for domestic and international logistics\n=======\n- Integration with ShipStation for domestic and international logistics\n- One-click reorder for past wholesale invoices\n- Real-time inventory visibility for the Sam Yirgacheffe and Colombia Huila lots\n- Subscription pause, skip, and swap functionality with a 48-hour cutoff before roast day\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0292_e3",
+   "ops": [
+    "change_number"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 112,
+   "response": "<edit>\n<<<<<<< SEARCH\nHome enthusiasts purchasing 12 oz bags of single-origin beans\n=======\nHome enthusiasts purchasing 13 oz bags of single-origin beans\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  }
+ ]
+}

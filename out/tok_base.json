@@ -1,0 +1,540 @@
+{
+ "n": 40,
+ "model_path": null,
+ "mode": "voice",
+ "agg": {
+  "parsed": 38,
+  "applied": 38,
+  "exact": 23,
+  "failed": 0
+ },
+ "rows": [
+  {
+   "id": "doc_0236_e0",
+   "ops": [
+    "fix_typo",
+    "delete_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 139,
+   "response": "<edit>\n<<<<<<< SEARCH\nwich runs at a locked 60 frames per second on target hardware.\n=======\nwhich runs at a locked 60 frames per second on target hardware.\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n- Emotional authenticity through unscripted dialogue trees with 14 recurring NPCs\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0236_e1",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 100,
+   "response": "<edit>\n<<<<<<< SEARCH\nA closed beta for 500 backers follows on September 3.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0236_e2",
+   "ops": [
+    "insert_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 145,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Player agency without fail states\u2014failure reshapes the world rather than ending the session\n=======\n- Player agency without fail states\u2014failure reshapes the world rather than ending the session\n- Collect feedback from the pilot group\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0236_e3",
+   "ops": [
+    "rename_heading",
+    "rename_entity"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 265,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Development Status\n=======\n## Next Steps\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n## Core Pillars\n=======\n## Dana Pillars\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0222_e0",
+   "ops": [
+    "insert_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 148,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Label each string with weatherproof tags before leaving the roof\n=======\n- Label each string with weatherproof tags before leaving the roof\n- Collect feedback from the pilot group\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0222_e1",
+   "ops": [
+    "rename_entity",
+    "change_number"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 719,
+   "response": "<edit>\n<<<<<<< SEARCH\nArticle\n=======\nPriya\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n31\n=======\n36\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0222_e2",
+   "ops": [
+    "delete_section",
+    "fix_typo"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 284,
+   "response": "<edit>\n<<<<<<< SEARCH\n## DC Wiring and Combiner Boxes\nRun 10 AWG PV wire in continuous conduit from the array to Combiner Box A, located on the north parapet wall. Keep DC and AC raceways separated by at least 1 inch, per NEC Article 690.31. Each combiner accepts four strings fused at 15 A; do not mix 430 W and older 370 W modules on the same fuse.\n\nGrounding electrode conductors must be bare copper, sized per Table 250.66, and bonded to the rail system with listed lay-in lugs. Double-check that rapid shutdown devices are within 1 foot of the array boundary, as required by the 2023 NEC update adopted in this jurisdiction on January 1, 2024.\n\n=======\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\nwich applies\n=======\nwhich applies\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0222_e3",
+   "ops": [
+    "rename_entity"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 133,
+   "response": "<edit>\n<<<<<<< SEARCH\nask the foreman if a detail conflicts with your plan\n=======\nask the foreman if a detail conflicts with Priya plan\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0025_e0",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 183,
+   "response": "<edit>\n<<<<<<< SEARCH\nWe still need to resolve clock drift between the Tokyo and Lisbon nodes and finalize licensing terms for Lin Zhou\u2019s bridge firmware.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0025_e1",
+   "ops": [
+    "change_number"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 189,
+   "response": "<edit>\n<<<<<<< SEARCH\nredundant 10 Gbps fiber links\n=======\nredundant 12 Gbps fiber links\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0025_e2",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 128,
+   "response": "<edit>\n<<<<<<< SEARCH\n## System Architecture\nThe backbone runs on redundant 10 Gbps fiber links between nodes. Each site hosts identical reference monitors\u2014Genelec 8351B\u2014calibrated to 83 dB SPL at the mix position. We use a custom Dante/AES67 bridge developed by engineer Lin Zhou, deployed first on March 14, 2024.\n\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0025_e3",
+   "ops": [
+    "delete_section",
+    "rename_entity"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 576,
+   "response": "<edit>\n<<<<<<< SEARCH\n## System Architecture\n=======\n## System Omar\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\ntechnical architecture\n=======\ntechnical Omar\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n## Open Questions\nWe still need to resolve clock drift between the Tokyo and Lisbon nodes and finalize licensing terms for Lin Zhou\u2019s bridge firmware. Budget approval for the redundant fiber upgrade is pending at \u20ac42,000.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0079_e0",
+   "ops": [
+    "insert_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 113,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Two-factor authentication enforcement for organization admins\n=======\n- Two-factor authentication enforcement for organization admins\n- Collected feedback from the pilot group\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0079_e1",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 102,
+   "response": "<edit>\n<<<<<<< SEARCH\nWe closed Sprint 42 with 87% of committed stories delivered, up from 71% in Sprint 41.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0079_e2",
+   "ops": [
+    "move_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 184,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Real-time vulnerability scanning for npm and cargo registries\n- Refactored caching layer reducing CI runner costs by $4,200/month\n- Dark-mode support for the dashboard and embedded logs\n- Two-factor authentication enforcement for organization admins\n=======\n- Two-factor authentication enforcement for organization admins\n- Real-time vulnerability scanning for npm and cargo registries\n- Refactored caching layer reducing CI runner costs by $4,200/month\n- Dark-mode support for the dashboard and embedded logs\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0079_e3",
+   "ops": [
+    "change_number"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 52,
+   "response": "<edit>\n<<<<<<< SEARCH\n87%\n=======\n89%\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0111_e0",
+   "ops": [
+    "move_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 247,
+   "response": "",
+   "parsed": false,
+   "applied": false,
+   "exact": false,
+   "error": "no edit blocks parsed"
+  },
+  {
+   "id": "doc_0111_e1",
+   "ops": [
+    "rename_heading"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 65,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Risk Factors and Mitigation\n=======\n## Action Items\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0111_e2",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 109,
+   "response": "<edit>\n<<<<<<< SEARCH\nThe findings indicate that while long-haul efficiency improved by 8.2 percent, regional hub congestion remains the dominant bottleneck.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0111_e3",
+   "ops": [
+    "insert_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 157,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Night-shift dispatch accuracy improved to 96.7 percent following the new scanning protocol\n=======\n- Night-shift dispatch accuracy improved to 96.7 percent following the new scanning protocol\n- schedule a follow-up review. appreciate it\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0273_e0",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 108,
+   "response": "<edit>\n<<<<<<< SEARCH\nThe release introduces the Cortex AI detection engine, which processes over 12 billion events per day with sub-200ms latency.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0273_e1",
+   "ops": [
+    "rename_heading"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 65,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Critical Vulnerability Patches\n=======\n## Key Risks\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0273_e2",
+   "ops": [
+    "rename_entity"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 117,
+   "response": "<edit>\n<<<<<<< SEARCH\nhardened endpoint telemetry\n=======\nMarcus endpoint telemetry\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\nEndpoint and Network Hardening\n=======\nEndpoint and Network Marcus\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0273_e3",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 302,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Major Platform Releases\nOn August 22, 2024, we shipped SentinelGrid Core 4.7.0 across all global nodes. The release introduces the Cortex AI detection engine, which processes over 12 billion events per day with sub-200ms latency. Key milestones include:\n- Full integration of the ZeroTrust Access Gateway (ZTAG-9000) for hybrid cloud workloads\n- Native support for MITRE ATT&CK v14.1 mapping in incident timelines\n- Enhanced SOAR playbooks for automated containment of supply-chain intrusions\n\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0102_e0",
+   "ops": [
+    "delete_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 74,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Refrigerated contract minimums increased from 12 to 18 loads per month\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0102_e1",
+   "ops": [
+    "move_bullet",
+    "delete_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 439,
+   "response": "<edit>\n<<<<<<< SEARCH\nAdditional milestones:\n- Launch of the Meridian Green Fleet pilot, deploying 48 electric terminal tractors at the Chicago hub\n- Partnership with the Environmental Protection Agency\u2019s SmartWay Transport program, effective June 2024\n- Publication of the 2023 Carbon Disclosure Report, available to stakeholders by request\n=======\nAdditional milestones:\n- Publication of the 2023 Carbon Disclosure Report, available to stakeholders by request\n- Launch of the Meridian Green Fleet pilot, deploying 48 electric terminal tractors at the Chicago hub\n- Partnership with the Environmental Protection Agency\u2019s SmartWay Transport program, effective June 2024\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n- Standard ground: delivery within 3-5 business days\n- Priority ground: delivery within 2 business days\n=======\n- Priority ground: delivery within 2 business days\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0102_e2",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 360,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Client Portal & Service Updates\n\nThe Meridian Client Gateway received a major update on May 15, 2024. Users now have access to predictive ETAs powered by machine-learning forecasts trained on 2.3 million historical delivery records.\n\nService-level commitments have been revised as follows:\n- Standard ground: delivery within 3-5 business days\n- Priority ground: delivery within 2 business days\n- White-glove installation: 48-hour scheduling with dedicated crew assignment\n\nFor technical support or contract inquiries, contact the Logistics Support Center at 1-800-555-0199 or via the updated portal messaging system.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0102_e3",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 219,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Client Portal & Service Updates\n\nThe Meridian Client Gateway received a major update on May 15, 2024. Users now have access to predictive ETAs powered by machine-learning forecasts trained on 2.3 million historical delivery records.\n\nService-level commitments have been revised as follows:\n- Standard ground: delivery within 3-5 business days\n- Priority ground: delivery within 2 business days\n- White-glove installation: 48-hour scheduling with dedicated crew assignment\n\nFor technical support or contract inquiries, contact the Logistics Support Center at 1-800-555-0199 or via the updated portal messaging system.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0096_e0",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 87,
+   "response": "<edit>\n<<<<<<< SEARCH\nPhase one involves API credential provisioning and sandbox testing, typically completed within five business days.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0096_e1",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 89,
+   "response": "<edit>\n<<<<<<< SEARCH\nPhase two introduces live micro-transactions capped at $50,000 to validate latency benchmarks.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0096_e2",
+   "ops": [
+    "move_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 174,
+   "response": "",
+   "parsed": false,
+   "applied": false,
+   "exact": false,
+   "error": "no edit blocks parsed"
+  },
+  {
+   "id": "doc_0096_e3",
+   "ops": [
+    "delete_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 141,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Real-time fraud scoring using a machine-learning model updated every 90 minutes\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0247_e0",
+   "ops": [
+    "delete_sentence"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 86,
+   "response": "<edit>\n<<<<<<< SEARCH\nConstruction begins October 2025, with revenue service targeted for September 2026.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0247_e1",
+   "ops": [
+    "insert_bullet"
+   ],
+   "voice": "openai:shimmer",
+   "completion_tokens": 223,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Retraining of 34 existing operators and maintenance staff through a 240-hour certification program developed with Riverside Community College\n=======\n- Retraining of 34 existing operators and maintenance staff through a 240-hour certification program developed with Riverside Community College\n- Schedule a follow-up review\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0247_e2",
+   "ops": [
+    "insert_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 229,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Retraining of 34 existing operators and maintenance staff through a 240-hour certification program developed with Riverside Community College\n=======\n- Retraining of 34 existing operators and maintenance staff through a 240-hour certification program developed with Riverside Community College\n- Confirmed total project budget and funding allocations with RTA Finance Department\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0247_e3",
+   "ops": [
+    "delete_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 170,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Procurement of 12 40-foot battery-electric buses from Proterra, with delivery scheduled for June 2026\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0200_e0",
+   "ops": [
+    "rename_entity"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 189,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Event Overview and Mission\n=======\n## Event Overview and Dana\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0200_e1",
+   "ops": [
+    "delete_section",
+    "rename_heading"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 542,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Event Overview and Mission\n=======\n## Details\n>>>>>>> REPLACE\n</edit>\n\n<edit>\n<<<<<<< SEARCH\n## Partnerships and Sponsorship\nThis year\u2019s presenting sponsor is the Meridian Technology Foundation, contributing $75,000 toward venue costs and scholarship travel for 40 rural teachers. Secondary support comes from BrightPath Devices, which will donate 120 refurbished tablets for our pilot classrooms. We are also partnering with Denver Public Media to broadcast the opening address to an estimated audience of 8,000 remote viewers.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  },
+  {
+   "id": "doc_0200_e2",
+   "ops": [
+    "delete_bullet"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 103,
+   "response": "<edit>\n<<<<<<< SEARCH\n- Networking reception with 25 partner organizations from 3:45 p.m. to 4:00 p.m.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": false,
+   "error": null
+  },
+  {
+   "id": "doc_0200_e3",
+   "ops": [
+    "delete_section"
+   ],
+   "voice": "openai:nova",
+   "completion_tokens": 325,
+   "response": "<edit>\n<<<<<<< SEARCH\n## Venue, Date, and Logistics\nThe one-day summit runs from 8:30 a.m. to 4:00 p.m. on Friday, March 14, 2025. The Civic Arts Center offers 12 breakout rooms, an auditorium seating 500, and complimentary parking for 180 vehicles. Registration opens January 20, 2025, through the Foundation portal, with early-bird pricing available until February 10. Catering will accommodate 340 plated lunches prepared by local vendor Green Plate Co-op, and all sessions will be live-captioned and archived for remote access.\n=======\n>>>>>>> REPLACE\n</edit>",
+   "parsed": true,
+   "applied": true,
+   "exact": true,
+   "error": null
+  }
+ ]
+}

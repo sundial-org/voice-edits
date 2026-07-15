@@ -1,0 +1,7 @@
+.env
+data/wav/
+__pycache__/
+.DS_Store
+*.aiff
+*.raw.wav
+demo/last_input.wav
