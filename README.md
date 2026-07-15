@@ -9,6 +9,8 @@ edit blocks that apply deterministically. See [RESULTS.md](RESULTS.md) for
 numbers: 65.8% → **85.0%** exact-match after 45 LoRA steps, with **3.5× fewer
 completion tokens**.
 
+![Demo: base vs fine-tuned race](demo/screenshot.png)
+
 ## Setup
 
 Requires Python 3.11+, PyTorch ≥ 2.10, the `tinker` SDK, and the `tml-renderers`
