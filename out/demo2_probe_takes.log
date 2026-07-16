@@ -1,0 +1,31 @@
+waiting for tinker recovery, then probing
+HEALTHY 28.5s
+  (base attempt 1 failed: timed out)
+  (base attempt 1 failed: timed out)
+  (base attempt 2 failed: timed out)
+  (base attempt 3 failed: timed out)
+  (base attempt 4 failed: timed out)
+  (base attempt 5 failed: timed out)
+  (base attempt 6 failed: Remote end closed connection without response)
+  (base attempt 7 failed: <urlopen error [Errno 61] Connection refused>)
+  (base attempt 8 failed: <urlopen error [Errno 61] Connection refused>)
+  (base attempt 1 failed: <urlopen error [Errno 61] Connection refused>)
+  (base attempt 2 failed: <urlopen error [Errno 61] Connection refused>)
+  (base attempt 3 failed: <urlopen error [Errno 61] Connection refused>)
+  (base attempt 4 failed: <urlopen error [Errno 61] Connection refused>)
+  (base attempt 5 failed: <urlopen error [Errno 61] Connection refused>)
+  (base attempt 6 failed: <urlopen error [Errno 61] Connection refused>)
+  (base attempt 7 failed: <urlopen error [Errno 61] Connection refused>)
+  (base attempt 8 failed: <urlopen error [Errno 61] Connection refused>)
+  (tuned attempt 1 failed: <urlopen error [Errno 61] Connection refused>)
+  (tuned attempt 2 failed: <urlopen error [Errno 61] Connection refused>)
+--- fresh run Wed Jul 15 21:54:02 PDT 2026 ---
+  (base attempt 1 failed: timed out)
+  (base attempt 2 failed: timed out)
+  (base attempt 3 failed: timed out)
+atlas     take | b:X/97t/3s b:X/97t/2s t:X/23t/7s t:X/23t/7s
+bullet    take | b:X/81t/2s b:X/81t/3s t:X/78t/9s t:X/38t/8s
+move      take | b:OK/222t/4s b:OK/222t/4s t:OK/60t/8s t:OK/60t/4s
+sentence  take | b:X/69t/2s b:X/66t/2s t:OK/31t/8s t:OK/31t/7s
+rename2   take | b:X/104t/2s b:X/104t/2s t:X/53t/9s t:X/45t/8s
+typo      take | b:OK/72t/1s b:OK/72t/2s t:OK/23t/11s t:OK/23t/4s

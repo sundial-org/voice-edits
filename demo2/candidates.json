@@ -1,0 +1,39 @@
+[
+ {
+  "id": "atlas",
+  "doc": "# Atlas Migration Plan\n\n## Overview\nThis document defines the technical architecture for migrating our search stack to the new cluster by June 2026.\n\n## System Architecture\nThe pipeline has three stages: ingestion, indexing, and serving. Indexing runs on 12 nodes with 64 GB of RAM each.\n\n## Rollout\n- Freeze schema changes on May 1\n- Mirror traffic to the new cluster for two weeks\n- Cut over read traffic once error rates match\n- Decommission the old cluster by July\n",
+  "instruction": "Everywhere it says Architecture, it should say Blueprint.",
+  "target": "# Atlas Migration Plan\n\n## Overview\nThis document defines the technical architecture for migrating our search stack to the new cluster by June 2026.\n\n## System Blueprint\nThe pipeline has three stages: ingestion, indexing, and serving. Indexing runs on 12 nodes with 64 GB of RAM each.\n\n## Rollout\n- Freeze schema changes on May 1\n- Mirror traffic to the new cluster for two weeks\n- Cut over read traffic once error rates match\n- Decommission the old cluster by July\n"
+ },
+ {
+  "id": "bullet",
+  "doc": "# Sprint 14 Notes\n\n## Decisions\nWe are shipping the redesigned editor behind a feature flag. Rollout starts with 5 percent of users on Tuesday.\n\n## Action Items\n- Update the onboarding checklist\n- File the accessibility audit with legal\n- Rotate the staging database credentials\n\n## Parking Lot\nRevisit the mobile keyboard shortcuts once the new editor is stable. Kai suggested we benchmark against the January build.\n",
+  "instruction": "Kill the Parking Lot section entirely. Oh, and add a bullet to the action items that says: draft the launch tweet.",
+  "target": "# Sprint 14 Notes\n\n## Decisions\nWe are shipping the redesigned editor behind a feature flag. Rollout starts with 5 percent of users on Tuesday.\n\n## Action Items\n- Update the onboarding checklist\n- File the accessibility audit with legal\n- Rotate the staging database credentials\n- draft the launch tweet\n"
+ },
+ {
+  "id": "move",
+  "doc": "# Field Kit Checklist\n\n## Before Departure\n- Charge both camera batteries\n- Print the site access permits\n- Pack the backup GPS unit\n- Confirm the rental van pickup time\n\n## On Site\nRecord ambient sound for at least ten minutes before the first interview. Label every card with the date and location code.\n",
+  "instruction": "In the Before Departure list, move the last bullet to the top of the list.",
+  "target": "# Field Kit Checklist\n\n## Before Departure\n- Confirm the rental van pickup time\n- Charge both camera batteries\n- Print the site access permits\n- Pack the backup GPS unit\n\n## On Site\nRecord ambient sound for at least ten minutes before the first interview. Label every card with the date and location code.\n"
+ },
+ {
+  "id": "sentence",
+  "doc": "# Q3 Retro Summary\n\n## What Went Well\nThe migration finished nine days early. Support tickets dropped 18 percent after the new docs shipped. The team also ran its first game day without incident.\n\n## What To Improve\nDeploys still require two approvers in different time zones, which slows Friday releases. We should revisit the approval policy before Q4.\n",
+  "instruction": "In What Went Well, delete the sentence about support tickets.",
+  "target": "# Q3 Retro Summary\n\n## What Went Well\nThe migration finished nine days early. The team also ran its first game day without incident.\n\n## What To Improve\nDeploys still require two approvers in different time zones, which slows Friday releases. We should revisit the approval policy before Q4.\n"
+ },
+ {
+  "id": "rename2",
+  "doc": "# Willow Launch Brief\n\n## Positioning\nWillow is our fastest sync engine yet. Early testers report setup takes under four minutes.\n\n## Timeline\n- Private beta opens March 3\n- Public waitlist opens March 17\n- General availability on April 9\n\n## Risks\nMarcus flagged that the billing integration is still untested at scale.\n",
+  "instruction": "Change the general availability date from April 9 to April 30, and replace Marcus with Dana.",
+  "target": "# Willow Launch Brief\n\n## Positioning\nWillow is our fastest sync engine yet. Early testers report setup takes under four minutes.\n\n## Timeline\n- Private beta opens March 3\n- Public waitlist opens March 17\n- General availability on April 30\n\n## Risks\nDana flagged that the billing integration is still untested at scale.\n",
+  "note": "both models likely get this one right - good as a warm opener"
+ },
+ {
+  "id": "typo",
+  "doc": "# Onboarding Guide\n\n## First Week\nNew hires shoud pair with a buddy for the first three days. Set up your development environment using the bootstrap script before Thursday.\n\n## Tools\n- Slack for day-to-day communication\n- Linear for task tracking\n- Notion for long-form documents\n",
+  "instruction": "There's one misspelled word in the doc somewhere, find it and fix it.",
+  "target": "# Onboarding Guide\n\n## First Week\nNew hires should pair with a buddy for the first three days. Set up your development environment using the bootstrap script before Thursday.\n\n## Tools\n- Slack for day-to-day communication\n- Linear for task tracking\n- Notion for long-form documents\n"
+ }
+]

@@ -77,6 +77,28 @@ def index():
     return HTMLResponse((DEMO / "index.html").read_text())
 
 
+V2 = DEMO.parent / "demo2"
+
+
+@app.get("/v2")
+def v2_index():
+    return HTMLResponse((V2 / "index.html").read_text())
+
+
+@app.get("/v2/candidates")
+def v2_candidates():
+    return json.loads((V2 / "candidates.json").read_text())
+
+
+@app.get("/v2/audio/{name}")
+def v2_audio(name: str):
+    for sub in ("takes", "tts"):
+        p = (V2 / sub / name).resolve()
+        if p.is_relative_to(V2) and p.suffix == ".wav" and p.exists():
+            return FileResponse(p, media_type="audio/wav")
+    return HTMLResponse(status_code=404, content="not found")
+
+
 @app.get("/api/samples")
 def samples():
     return json.loads((DEMO / "samples.json").read_text())
