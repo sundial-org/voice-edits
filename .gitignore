@@ -5,3 +5,6 @@ __pycache__/
 *.aiff
 *.raw.wav
 demo/last_input.wav
+demo2/video/frame_*.png
+demo2/video/final_state.png
+demo2/video/frames_*/
