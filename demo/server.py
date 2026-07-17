@@ -8,6 +8,7 @@ import io
 import json
 import sys
 import time
+import uuid
 import wave
 from pathlib import Path
 
@@ -116,17 +117,19 @@ def edit(req: EditRequest):
     raw = base64.b64decode(req.audio_b64)
     with wave.open(io.BytesIO(raw)) as w:
         nf, sr = w.getnframes(), w.getframerate()
-    tmp = DEMO / "last_input.wav"
+    tmp = DEMO / f"input_{uuid.uuid4().hex[:8]}.wav"
     tmp.write_bytes(raw)
-
-    msgs = common.build_messages(req.doc, wav_path=tmp)
-    spans, parser = renderer.render_for_completion(msgs)
-    t0 = time.time()
-    out = CLIENTS[req.model].sample(
-        prompt=token_spans_to_tinker_model_input(spans),
-        sampling_params=types.SamplingParams(max_tokens=1200, temperature=0.0,
-                                             stop=renderer.stop()),
-        num_samples=1).result()
+    try:
+        msgs = common.build_messages(req.doc, wav_path=tmp)
+        spans, parser = renderer.render_for_completion(msgs)
+        t0 = time.time()
+        out = CLIENTS[req.model].sample(
+            prompt=token_spans_to_tinker_model_input(spans),
+            sampling_params=types.SamplingParams(max_tokens=1200, temperature=0.0,
+                                                 stop=renderer.stop()),
+            num_samples=1).result()
+    finally:
+        tmp.unlink(missing_ok=True)
     ms = int((time.time() - t0) * 1000)
     seq = out.sequences[0]
     thinking, text = [], []

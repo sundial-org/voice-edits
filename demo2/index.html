@@ -53,7 +53,20 @@ border-radius:8px;padding:10px 12px;margin-top:12px;flex:1;min-height:0;overflow
 .dots::after{content:"";animation:dots 1.2s steps(4,end) infinite}
 @keyframes dots{0%{content:""}25%{content:"·"}50%{content:"· ·"}75%{content:"· · ·"}}
 #foot{font-size:13px;color:var(--dim);text-align:right;letter-spacing:.3px}
+.badge{font-size:11px;border:1px solid var(--line);border-radius:20px;padding:1px 9px;color:var(--dim);font-weight:400;letter-spacing:0;text-transform:none;margin-left:10px}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+
+/* dark theme: exact palette of the original demo (?theme=dark) */
+body.dark{--paper:#0d1117;--card:#161b22;--ink:#e6edf3;--dim:#8b949e;--line:#30363d;
+--voice:#e8945a;--good:#3fb950;--goodbg:#12261b;--bad:#e5534b;--badbg:#2a1517}
+body.dark .card,body.dark #docwrap{box-shadow:none}
+body.dark #doc{font-size:21px;line-height:1.6}
+body.dark #caption{font-size:29px}
+body.dark #doc .del{color:#e07a7a}
+body.dark #doc .add{color:#7ee2a8}
+body.dark .card.good .verdict .v{color:#7ee2a8}
+body.dark .card.bad .verdict .v{color:#e07a7a}
+body.dark .card pre{background:#0d1117;color:#c9d1d9}
 </style>
 </head>
 <body>
@@ -65,8 +78,8 @@ border-radius:8px;padding:10px 12px;margin-top:12px;flex:1;min-height:0;overflow
 <div id="stage">
   <div id="docwrap"><div id="doc"></div></div>
   <div id="cards">
-    <div class="card" id="c-tuned"><h2>Fine-tuned Inkling</h2><div class="verdict"></div><div class="meta"></div><pre></pre></div>
-    <div class="card" id="c-base"><h2>Base Inkling</h2><div class="verdict"></div><div class="meta"></div><pre></pre></div>
+    <div class="card" id="c-tuned"><h2>Fine-tuned Inkling<span class="badge">45 LoRA steps</span></h2><div class="verdict"></div><div class="meta"></div><pre></pre></div>
+    <div class="card" id="c-base"><h2>Base Inkling<span class="badge">zero-shot</span></h2><div class="verdict"></div><div class="meta"></div><pre></pre></div>
   </div>
 </div>
 <div id="foot">thinkingmachines/Inkling · fine-tuned with Tinker · Sundial</div>
@@ -77,6 +90,7 @@ const norm=s=>s.split("\n").map(l=>l.replace(/[ \t]+$/,"")).join("\n").replace(/
 function b64(bytes){let s="";for(let i=0;i<bytes.length;i+=32768)s+=String.fromCharCode.apply(null,bytes.subarray(i,i+32768));return btoa(s)}
 
 const q=new URLSearchParams(location.search);
+if(q.get("theme")==="dark") document.body.classList.add("dark");
 let CAND=null, AUDIO=null;
 
 async function load(){
@@ -131,7 +145,7 @@ function showResult(model,r){
     const after=esc(a.slice(k+2,k+34)).replace(/\n/g," ");
     const el=document.createElement("div");
     el.style.cssText="margin-top:10px;font:13px/1.5 ui-monospace,monospace;color:var(--bad)";
-    el.innerHTML='what it left in the doc: <span style="background:var(--badbg);border-radius:4px;padding:2px 6px;color:var(--ink)">\u2026'+before+'<b style="color:var(--bad);background:#f6c9c4;border-radius:2px;padding:0 1px">'+flaw+'</b>'+after+'\u2026</span>';
+    el.innerHTML='what it left in the doc: <span style="background:var(--badbg);border-radius:4px;padding:2px 6px;color:var(--ink)">\u2026'+before+'<b style="color:#fff;background:var(--bad);border-radius:2px;padding:0 1px">'+flaw+'</b>'+after+'\u2026</span>';
     pre.after(el);
   }
   return {model,r,correct};

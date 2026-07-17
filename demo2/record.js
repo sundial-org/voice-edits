@@ -53,7 +53,8 @@ function apiEdit(doc, model, audioB64) {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
   page.on('pageerror', e => console.log('PAGEERROR:', e.message));
-  await page.goto(`http://localhost:8322/v2?id=${ID}&audio=${AUDIO}`, { waitUntil: 'networkidle' });
+  const THEME = process.env.THEME || 'dark';
+  await page.goto(`http://localhost:8322/v2?id=${ID}&audio=${AUDIO}&theme=${THEME}`, { waitUntil: 'networkidle' });
   await page.evaluate(data => window.puppetInit(data), { tuned, base });
 
   let n = 0;
