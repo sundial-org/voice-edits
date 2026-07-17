@@ -216,11 +216,8 @@ window.puppetInit=(data)=>{
 window.puppetSeek=(t)=>{
   const LEAD=0.3, dur=DUR||4, SPEECH_END=LEAD+dur;
   const STOP=SPEECH_END+0.3, RACE=STOP+0.7, RS=RACE+0.25;
-  // base: real measured latency; tuned: base's measured per-token throughput
-  // applied to tuned's token count (equal-serving projection, matches token stats)
-  const msB=PUP.data.base.ms/1000;
-  const msT=msB*(PUP.data.tuned.tokens/PUP.data.base.tokens);
-  PUP.data.tuned.ms=Math.round(msT*1000);
+  // real measured latencies from this recording's API calls, unmodified
+  const msB=PUP.data.base.ms/1000, msT=PUP.data.tuned.ms/1000;
   const BOTH=RS+Math.max(msT,msB), DIF=BOTH+1.0, COL=DIF+2.0, COLE=COL+0.7, END=COLE+3.2;
   // record button live from the first frame; released after speech
   if(t<STOP){$("#rec").textContent="\u23f9 Stop";$("#rec").classList.add("on")}
@@ -228,8 +225,12 @@ window.puppetSeek=(t)=>{
   if(t>=LEAD-0.05) $("#caption").style.visibility="visible";
   const p=Math.max(0,Math.min(1,(t-LEAD)/dur));
   drawBars(p);
-  // whisper stamps word onset; a word reads as said at its END, so shift +0.4s
-  for(const {el,t:wt} of wordTimes()) if(t-LEAD>=wt+0.65) el.classList.add("on");
+  // a word appears only once fully spoken: reveal at the NEXT word's onset
+  const wts=wordTimes();
+  wts.forEach(({el},i)=>{
+    const doneAt=(i<wts.length-1?wts[i+1].t:wts[i].t+0.5)+0.1;
+    if(t-LEAD>=doneAt) el.classList.add("on");
+  });
   if(t>=RACE&&t<RACE+0.45) $("#go").classList.add("pressed"); else $("#go").classList.remove("pressed");
   // each card runs its real measured inference time, ticking live, resolving independently
   for(const [model,ms] of [["tuned",msT],["base",msB]]){
