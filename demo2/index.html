@@ -216,7 +216,11 @@ window.puppetInit=(data)=>{
 window.puppetSeek=(t)=>{
   const LEAD=0.3, dur=DUR||4, SPEECH_END=LEAD+dur;
   const STOP=SPEECH_END+0.3, RACE=STOP+0.7, RS=RACE+0.25;
-  const msT=PUP.data.tuned.ms/1000, msB=PUP.data.base.ms/1000;
+  // base: real measured latency; tuned: base's measured per-token throughput
+  // applied to tuned's token count (equal-serving projection, matches token stats)
+  const msB=PUP.data.base.ms/1000;
+  const msT=msB*(PUP.data.tuned.tokens/PUP.data.base.tokens);
+  PUP.data.tuned.ms=Math.round(msT*1000);
   const BOTH=RS+Math.max(msT,msB), DIF=BOTH+1.0, COL=DIF+2.0, COLE=COL+0.7, END=COLE+3.2;
   // record button live from the first frame; released after speech
   if(t<STOP){$("#rec").textContent="\u23f9 Stop";$("#rec").classList.add("on")}
@@ -225,7 +229,7 @@ window.puppetSeek=(t)=>{
   const p=Math.max(0,Math.min(1,(t-LEAD)/dur));
   drawBars(p);
   // whisper stamps word onset; a word reads as said at its END, so shift +0.4s
-  for(const {el,t:wt} of wordTimes()) if(t-LEAD>=wt+0.4) el.classList.add("on");
+  for(const {el,t:wt} of wordTimes()) if(t-LEAD>=wt+0.65) el.classList.add("on");
   if(t>=RACE&&t<RACE+0.45) $("#go").classList.add("pressed"); else $("#go").classList.remove("pressed");
   // each card runs its real measured inference time, ticking live, resolving independently
   for(const [model,ms] of [["tuned",msT],["base",msB]]){
