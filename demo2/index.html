@@ -134,7 +134,7 @@ function showResult(model,r){
   const card=$(`#c-${model==="tuned"?"tuned":"base"}`);
   const correct=!r.error&&norm(r.applied_doc)===norm(CAND.target);
   card.classList.add(correct?"good":"bad");
-  card.querySelector(".meta").innerHTML=`<b>${r.tokens}</b> completion tokens`;
+  card.querySelector(".meta").innerHTML=`${(r.ms/1000).toFixed(1)}s · <b>${r.tokens}</b> completion tokens`;
   card.querySelector("pre").textContent=r.response||"(no edit produced)";
   return {model,r,correct};
 }
@@ -214,22 +214,27 @@ window.puppetInit=(data)=>{
   window.__puppetReady=true;
 };
 window.puppetSeek=(t)=>{
-  const LEAD=1.6, dur=DUR||4, SPEECH_END=LEAD+dur;
-  const STOP=SPEECH_END+0.4, RACE=STOP+0.8, THINK=RACE+0.35, REV=THINK+2.4,
-        DIF=REV+1.0, COL=DIF+2.0, COLE=COL+0.7, END=COLE+3.2;
-  // record button: pressed just before speech, released after
-  if(t>=0.6&&t<STOP){$("#rec").textContent="⏹ Stop";$("#rec").classList.add("on")}
-  else{$("#rec").textContent="🎙 Record";$("#rec").classList.remove("on")}
-  // caption + waveform from real word times / real envelope
+  const LEAD=0.3, dur=DUR||4, SPEECH_END=LEAD+dur;
+  const STOP=SPEECH_END+0.3, RACE=STOP+0.7, RS=RACE+0.25;
+  const msT=PUP.data.tuned.ms/1000, msB=PUP.data.base.ms/1000;
+  const BOTH=RS+Math.max(msT,msB), DIF=BOTH+1.0, COL=DIF+2.0, COLE=COL+0.7, END=COLE+3.2;
+  // record button live from the first frame; released after speech
+  if(t<STOP){$("#rec").textContent="\u23f9 Stop";$("#rec").classList.add("on")}
+  else{$("#rec").textContent="\ud83c\udf99 Record";$("#rec").classList.remove("on")}
   if(t>=LEAD-0.05) $("#caption").style.visibility="visible";
   const p=Math.max(0,Math.min(1,(t-LEAD)/dur));
   drawBars(p);
-  for(const {el,t:wt} of wordTimes()) if(t-LEAD>=wt) el.classList.add("on");
+  // whisper stamps word onset; a word reads as said at its END, so shift +0.4s
+  for(const {el,t:wt} of wordTimes()) if(t-LEAD>=wt+0.4) el.classList.add("on");
   if(t>=RACE&&t<RACE+0.45) $("#go").classList.add("pressed"); else $("#go").classList.remove("pressed");
-  if(t>=THINK&&PUP.phase<1){PUP.phase=1;
-    $("#c-tuned .meta").textContent="…"; $("#c-base .meta").textContent="…"}
-  if(t>=REV&&PUP.phase<2){PUP.phase=2;showResult("tuned",PUP.data.tuned);showResult("base",PUP.data.base)}
-  if(t>=DIF&&PUP.phase<3){PUP.phase=3;applyDiff(true)}
+  // each card runs its real measured inference time, ticking live, resolving independently
+  for(const [model,ms] of [["tuned",msT],["base",msB]]){
+    const key="done_"+model;
+    if(t>=RS&&t<RS+ms&&!PUP[key])
+      $(`#c-${model} .meta`).textContent=(t-RS).toFixed(1)+"s";
+    if(t>=RS+ms&&!PUP[key]){PUP[key]=true;showResult(model,PUP.data[model])}
+  }
+  if(t>=DIF&&!PUP.dif){PUP.dif=true;applyDiff(true)}
   if(t>=COL){const qq=Math.min(1,(t-COL)/0.7);
     document.querySelectorAll("#doc .del").forEach(e=>{e.style.maxHeight=(200*(1-qq))+"px";e.style.opacity=String(1-qq)});}
   return t>=END;
