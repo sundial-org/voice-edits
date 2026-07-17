@@ -93,10 +93,11 @@ def v2_candidates():
 
 @app.get("/v2/audio/{name}")
 def v2_audio(name: str):
+    types = {".wav": "audio/wav", ".json": "application/json"}
     for sub in ("takes", "tts"):
         p = (V2 / sub / name).resolve()
-        if p.is_relative_to(V2) and p.suffix == ".wav" and p.exists():
-            return FileResponse(p, media_type="audio/wav")
+        if p.is_relative_to(V2) and p.suffix in types and p.exists():
+            return FileResponse(p, media_type=types[p.suffix])
     return HTMLResponse(status_code=404, content="not found")
 
 
