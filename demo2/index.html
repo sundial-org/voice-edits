@@ -228,7 +228,7 @@ window.puppetSeek=(t)=>{
   // a word appears only once fully spoken: reveal at the NEXT word's onset
   const wts=wordTimes();
   wts.forEach(({el},i)=>{
-    const doneAt=(i<wts.length-1?wts[i+1].t:wts[i].t+0.5)+0.1;
+    const doneAt=(i<wts.length-1?wts[i+1].t:wts[i].t+0.5)+0.55;
     if(t-LEAD>=doneAt) el.classList.add("on");
   });
   if(t>=RACE&&t<RACE+0.45) $("#go").classList.add("pressed"); else $("#go").classList.remove("pressed");
